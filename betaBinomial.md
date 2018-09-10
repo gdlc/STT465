@@ -1,4 +1,15 @@
 
+# Topics
+
+  - **Likelihood**
+  - **Maximum Likelihood Inference** (estimator, and it's sampling distribution)
+  - **Beta Prior**
+  - **Posterior Distribution**
+  - **Bayesian Inference**
+  - **Comparison of Bayesian and Maximum Likelihood Inference**
+  - **Effect of the Prior Distribution on Bayesian Inference**
+
+
 ## Example: Effect of Sample Size on Likelihood and Posterior Inferences
 
 The following example displays the likelihood and posterior density (both up to a constant)
