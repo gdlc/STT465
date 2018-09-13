@@ -2,7 +2,7 @@ The course assumes that you are familiar with basic probability concepts, includ
 
   - Definition of random variables and events
   - Axioms of probability
-  - Definition and rules of expectations of random variables and of functions of it
+  - Definition and rules of expectations of random variables and functions thereof
   - Independence
   - Commonly used probabilities for discrete (Bernoulli, Bionmial, Poisson will be ones we will use) and contionous random variables (Normal, Gamma (and special cases of it), Beta, Chi-Squared).
   
