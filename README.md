@@ -11,7 +11,7 @@
 
 **Course Website**:  https://github.com/gdlc/STT465 
 
-**Office Hours**: TBA
+**Office Hours**: I would like to discuss all the questions that you have within the class. I will be sure to provide pleanty of time during class to discuss any questions that you may have. Additionally I'll be available for office hours Wednesday & Friday 9:00-10:00am  (@ Wells Hall room 404C).
 
 **Textbook (required)**: A First Course in Bayesian Statistical Methods, Peter D. Hoff, Springer.
 
