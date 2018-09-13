@@ -1,3 +1,18 @@
+The course assumes that you are familiar with basic probability concepts, including:
+
+  - Definition of random variables and events
+  - Axioms of probability
+  - Definition and rules of expectations of random variables and of functions of it
+  - Independence
+  - Commonly used probabilities for discrete (Bernoulli, Bionmial, Poisson will be ones we will use) and contionous random variables (Normal, Gamma (and special cases of it), Beta, Chi-Squared).
+  
+
+**Chapter 2** of Hoff's book provides an overview of probability. An excellent (and very approachable) reference is the book by Ross [Introduction to Probability](https://www.pearson.com/us/higher-education/program/Ross-First-Course-in-Probability-A-9th-Edition/PGM110742.html). There are pleanty of very good resources on the web...
+
+
+Here is a summary of the topics I'll cover in class.
+
+
 ### Basic Rules of Probability (Chapter 2)
 
   - Random Variables, Sample Space & Events
