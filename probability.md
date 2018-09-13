@@ -5,6 +5,8 @@ The course assumes that you are familiar with basic probability concepts, includ
   - Definition and rules of expectations of random variables and functions thereof
   - Independence
   - Commonly used probabilities for discrete (Bernoulli, Bionmial, Poisson will be ones we will use) and contionous random variables (Normal, Gamma (and special cases of it), Beta, Chi-Squared).
+  - The Central Limit Theorem (for IID random variables).
+
   
 
 **Chapter 2** of Hoff's book provides an overview of probability. An excellent (and very approachable) reference is the book by Ross [Introduction to Probability](https://www.pearson.com/us/higher-education/program/Ross-First-Course-in-Probability-A-9th-Edition/PGM110742.html). There are pleanty of very good resources on the web...
