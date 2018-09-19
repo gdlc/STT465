@@ -69,4 +69,65 @@ number of successes in the sample) with sample size being varied from 10 to 100.
   abline(v=c(xBar,shape1/(shape1+shape2)),col=1,lty=2)
 ```
  
+ 
+ ## Another Example comparing (approximate) Frequentist inference based on the CLT and Bayesian inference
+ 
+ 
+Suppose we run 4 IID Bernulli trials and we observe 1 succes and 3 failures.
+
+**Approximate Inference using the Central Limit Theorem**
+
+```r
+  N=4
+  xBar=0.25 # the ML estimator
+   
+  # Approximate 95% CI  
+  samplingVariance=xBar*(1-xBar)/N 
+  CI=xBar+c(-1,1)*sqrt(samplingVariance)*1.96
+  
+  par(mfrow=c(2,1))
+  ## The approximate sampling distribution
+  x=seq(from=-.2,to=1,by=1/1000)
+  y=dnorm(x=x,mean=xBar,sd=sqrt(samplingVariance))
+  plot(y~x,type='l',col=4,xlim=c(-.2,1),main='(Approximate) Sampling Distribution of the MLE')
+  abline(v=CI,lty=2,col=2)
+  abline(v=xBar,col=3)
+  
+  
+```
+
+
+Discuss:
+
+    - Why is this only approximate?
+    - How good is the approximation?
+    - Why is the approximation poor?
+    
+
+**Bayesian Inference with Uniform prior**
+
+```r
+  alpha0=1
+  beta0=1
+  
+  alpha=alpha0+N*xBar
+  beta=alpha0+N*(1-xBar)
+  
+  
+  ## Posterior mean and posterior mode
+  postMean=alpha/(alpha+beta)
+  postMode=(alpha-1)/(alpha+beta-2)
+  
+  y=dbeta(x=x,shape1=alpha,shape2=beta)
+  plot(y~x,type='l',col=4,xlim=c(-.2,1.2),main='Posterior Distribution')
+  CR=qbeta(shape1=alpha,shape2=beta,p=c(.025,.975))
+  abline(v=CR,lty=2,col=2)
+  abline(v=c(postMean,postMode),col=c(3,5))
+```
+
+Discuss:
+	- Interpretation of CI and Bayesian CR
+	- Numerical differences/similarities....
+	- Change N=100 and run it again...
+
 
