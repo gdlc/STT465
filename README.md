@@ -29,4 +29,5 @@
 
 ## Homework
  
-  - **[HW 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)** (Due Sunday Sept. 16).
+  - **[HW 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)** (Due Sunday Sept. 16th).
+  - **[HW 2](https://github.com/gdlc/STT465/blob/master/HW2.md)** (Due Sunday Sept. 30th).
