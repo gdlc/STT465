@@ -88,12 +88,12 @@ Let's compare the prior, likelihood and posterior distribution (I scale all of t
 *4. The Predictive Distribution**
 
 
-The predictive distribution is $p(xNew|xPast)$. To arrive at the predictive distribution we:
+The predictive distribution is `p(xNew|xPast)`. To arrive at the predictive distribution we:
 
   - Augment the distribution by introducing the uknownparameter
   - Integrate the uknown parameter out.
   
- `p(xNew|xPast)=`
+ `p(xNew|xPast)=Int( p(xNew,lambda|xPast)   ,with respect to lambda)`.
 ```r
 
 
