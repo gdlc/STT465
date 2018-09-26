@@ -54,3 +54,5 @@ c) Present in a bar-plot the observed frequencies (from question a) and the pred
 
 d) Comment the results that you obained in c. Does the Poisson model fits well this data?
 
+
+
