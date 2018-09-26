@@ -104,7 +104,7 @@ Conditional on `lambda` the future data does not depend on the past data, then
 
  `p(xNew,lambda|xPast)=p(xNew|lambda)p(lambda|xPast)`.
  
-The first term in the right-hand side is the Poisson likelihood, and the second term is the posterior distribution which we showed in this model is Gamma. To arrive at the predictive distribution we need to integrate lambda out from `p(xNew,lambda|xPast)`. We can do this analythically (see ) or numerically, using Monte Carlo methods.
+The first term in the right-hand side is the Poisson likelihood, and the second term is the posterior distribution which we showed in this model is Gamma. To arrive at the predictive distribution we need to integrate lambda out from `p(xNew,lambda|xPast)`. We can do this analythically (see pp 47 in the book) or numerically, using Monte Carlo methods.
  
 *Monte Carlo Estimation of the Predictive Distribution*
 
@@ -126,7 +126,7 @@ The first term in the right-hand side is the Poisson likelihood, and the second 
  
 ```
 
-How good is the Monte Carlo estimate? We will show in class (and also see pp  in the book) that the predictive distribution is Negative Binomial, in the next block of code we compare our MC estimate with the actual predictive distribution.
+How good is the Monte Carlo estimate? We will show in class (and also see pp 47 in the book) that the predictive distribution is Negative Binomial, in the next block of code we compare our MC estimate with the actual predictive distribution.
 
 ```r
 
