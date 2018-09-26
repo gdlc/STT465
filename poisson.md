@@ -69,7 +69,7 @@ We showed in class that the conjugate prior for the Poisson likelihood is Gamma.
   BayesianCR=qgamma(shape=posteriorShape,rate=posteriorRate,p=c(.025,.975))
 ```
 
-Let's compare the prior, likelihood and posterior distribution (I scale all of them to have a maximum=1
+Let's compare the prior, likelihood and posterior distribution (I scale all of them to have a maximum=1).
 
 ```r
  priorDensity=dgamma(rate=rate,shape=shape,x=lambda)
@@ -85,4 +85,16 @@ Let's compare the prior, likelihood and posterior distribution (I scale all of t
 
 ```
 
+*4. The Predictive Distribution**
 
+
+The predictive distribution is $p(xNew|xPast)$. To arrive at the predictive distribution we:
+
+  - Augment the distribution by introducing the uknownparameter
+  - Integrate the uknown parameter out.
+  
+ `p(xNew|xPast)=`
+```r
+
+
+```
