@@ -1,7 +1,7 @@
 
 ## Poisson-Gamma (single-parameter) model
 
-**Topics**:
+**Topics taht we will cover**:
 
   - Likelihood function
   - Maximum Likelihood inference (ML estimator, inference under the CLT theorem)
@@ -12,4 +12,13 @@
       - Predictive distribution (Negative binomial, analythically and using Monte Carlo Methods).
       
  
+ **Examples**:
  
+ *A small simulated data set*
+ 
+ ```r
+  n=50
+  x=rpois(n=n,lambda=2)
+  
+ ```
+ *1. Maximum likelihood inference*
