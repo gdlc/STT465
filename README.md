@@ -25,6 +25,7 @@
    - **[Review of Probability & Bayes Theorem](https://github.com/gdlc/STT465/edit/master/probability.md)**
    - **[Introduction to R](https://github.com/QuantGen/RIntro)** [Covered by Marco Lopez-Cruz].
    - **[Beta-Binomial Model](betaBinomial.md)**
+   - **[Poisson-Gamma Model](https://github.com/gdlc/STT465/blob/master/poisson.md)**
 
 
 ## Homework
