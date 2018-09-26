@@ -126,9 +126,16 @@ The first term in the right-hand side is the Poisson likelihood, and the second 
  
 ```
 
-How good is the Monte Carlo estimate? We will show in class (and also see pp 47 in the book) that the predictive distribution is Negative Binomial, in the next block of code we compare our MC estimate with the actual predictive distribution.
+How good is the Monte Carlo estimate? We will show in class (and also see pp 47 in the book) that the predictive distribution is Negative Binomial, thus, the quality of the MC estimate can be evaluated by comparing the MC estimated predictive distribution with the Negative Bionmial.
+
+
+*Comparsion with the Naive plug-in estimator*
+
+A naive estimator of the preditive distribution would be a Poisson distribution with `lambda=ML estimate` or `lambda=Posterior mean`. This predictive distribution does not account for the uncertainty about lambda. Let's compare it with the correct predictive distribution the one derived in the previous block of code).
 
 ```r
-
+  y=dpois(x=x,lambda=posteriorShape/posteriorRate)
+  points(x=x,y=y,pch=19,col='darkred')
+  lines(x=x,y=y,col='darkred') #strictly speaking we should not add lines because x is discrete...
 
 ```
