@@ -93,7 +93,41 @@ The predictive distribution is `p(xNew|xPast)`. To arrive at the predictive dist
   - Augment the distribution by introducing the uknownparameter
   - Integrate the uknown parameter out.
   
- `p(xNew|xPast)=Int( p(xNew,lambda|xPast)   ,with respect to lambda)`.
+Consider the joint posterior distribution of future data and the uknownparameter, `p(xNew,lambda|xPast)`. Using rules of probability discussed in the class we have
+ 
+ 
+ `p(xNew,lambda|xPast)=p(xNew|lambda,xPast)p(lambda|xPast)`.
+ 
+
+Conditional on `lambda` the future data does not depend on the past data, then
+
+
+ `p(xNew,lambda|xPast)=p(xNew|lambda)p(lambda|xPast)`.
+ 
+The first term in the right-hand side is the Poisson likelihood, and the second term is the posterior distribution which we showed in this model is Gamma. To arrive at the predictive distribution we need to integrate lambda out from `p(xNew,lambda|xPast)`. We can do this analythically (see ) or numerically, using Monte Carlo methods.
+ 
+*Monte Carlo Estimation of the Predictive Distribution*
+
+```r
+ nMCSamples=10000
+ 
+ x=seq(from=0,to=10,by=1)
+ 
+ PRED.DIST=matrix(nrow=nMCSamples,ncol=length(x))
+ 
+ for(i in 1:nMCSamples){
+    tmpLambda=rgamma(n=1,shape=posteriorShape,rate=posteriorRate)
+    PRED.DIST[i,]=dpois(x=x,lambda=tmpLambda)
+ }
+
+ MC.EST.PRED.DIST=colMeans(PRED.DIST)
+ 
+ barplot(MC.EST.PRED.DIST)
+ 
+```
+
+How good is the Monte Carlo estimate? We will show in class (and also see pp  in the book) that the predictive distribution is Negative Binomial, in the next block of code we compare our MC estimate with the actual predictive distribution.
+
 ```r
 
 
