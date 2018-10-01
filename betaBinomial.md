@@ -8,6 +8,7 @@
   - **Bayesian Inference**
   - **Comparison of Bayesian and Maximum Likelihood Inference**
   - **Effect of the Prior Distribution on Bayesian Inference**
+  - **Predictive Distribution**
 
 
 ## Example: Effect of Sample Size on Likelihood and Posterior Inferences
@@ -129,5 +130,30 @@ Discuss:
 	- Interpretation of CI and Bayesian CR
 	- Numerical differences/similarities....
 	- Change N=100 and run it again...
+
+
+**Predictive Distribution**
+
+The predictive distribution is the probability of future data (Xf) given the data that you have observed (Xp), that is
+
+            p(Xf|Xp)                       [1]
+	    
+Importantly this distribution does not depend on the uknown parameter(s), which in the Binomial model is the success probability. How do we arrive at [1]? We use a technique called data-augmentation. We find the posterior distribution of the future data and the uknown parameter, conditional on the past data, and integrate this joint conditional with respect to the uknown parameters. That is:
+
+
+            p(Xf|Xp)=Int{ p(Xf,theta|Xp) ; with respect to theta }
+	    
+(where Int{ . ; with respect to theta}  means integrate the function with respect to theat).Note that conditional on the success probability the future data does not depend on the past data; therefore:
+
+
+            p(Xf|Xp)=Int{ p(Xf|theta)p(theta|Xp) ; with respect to theta }
+	    
+
+The secont term, p(theta|Xp), is the posterior distribution of theta which in the Beta-Binomial model we have shown to be Beta. We will discuss in class (and this is also discussed in the book) two ways to perform the above integral, analythically and numerically (i.e., using Monte Carlo Methods).
+
+
+
+
+
 
 
