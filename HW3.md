@@ -19,14 +19,14 @@ The data set can read into R using the following code
   
   b) Write the likelihood function
 
-  c) Derive the posterior distribution assuming a Gamma prior with rate=6 and shape=2
+  c) Derive the posterior distribution assuming a Gamma prior with rate=20 and shape=3
   
   d) Provide the posterior mean, posterior SD and 95 and 99% posterior credibility region (hint: you can get a formula for the variance from the Gamma distribution, credibility regions can be derived using `qgamma`).
 
   e) Plot the prior and posterior distribution of lambda, in the same plot.
   
  
-#### Q2: Normal Model
+#### Q2: Maximum Likelihood Inference of the mean in a Gaussian Model
 
 For this question we will use the variable `DATA$width`.
 
@@ -34,6 +34,6 @@ For this question we will use the variable `DATA$width`.
    
    b) Write the likelihood function under Gaussian assumptions.
    
-   c) Derive the Maximum Likelihood estimator of the mean parameter
+   c) Derive the Maximum Likelihood estimator of the mean parameter (recall the steps: write the likelihood, simplify as much as possible, take the log, take derivative with respect to the mean, set the derivative equal to zero, solve for the mean).
    
    d) Provide the Max. Lileihood esitmate of the mean for this data set together with an approximate 95% CI (assume Central Limit Theorem).
