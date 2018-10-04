@@ -2,7 +2,7 @@
 ## HW3: Poisson & Normal models
 
 
-Due Oct 9th in D2L.
+Due Oct 9th in D2L (please submit either pdf, html, image or word file).
 
 #### Q1: Bayesian Inference in the Poisson model
 
