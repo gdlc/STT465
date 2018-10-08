@@ -135,5 +135,11 @@ and three different sample sizes.
     CR=cbind(qnorm(mean=postMean,sd=sqrt(postVar),p=.025),
           qnorm(mean=postMean,sd=sqrt(postVar),p=.975))
     show(CR)
+    
+    ## In this case, sample size affects the witdh of the frequentist CI but not the midpoint
+     CI[,1]+(CI[,2]-CI[,1])/2
+     
+    ## However, because the prior mean is not equal to the data mean, in the Bayesian CR, the midpoint also changes.
+     CR[,1]+(CR[,2]-CR[,1])/2
  ```
  	
