@@ -90,7 +90,7 @@ where the mean is modeled using a multiple linear regression.
 The first 2 cases are discussed in the book in chapter 5. Here I reproduce some of the scripts we develop in class. This is by no means
 a substitute for the notes you take in class and the book.
 
-#### (1) Mean with known variance
+#### (1) Bayesian Inference of the mean with known variance
 
 In the following example we examine the ML estimator and the mean and variance of the posterior density for data with the same mean
 and three different sample sizes.
