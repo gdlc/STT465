@@ -26,7 +26,9 @@
    - **[Introduction to R](https://github.com/QuantGen/RIntro)** [Covered by Marco Lopez-Cruz].
    - **[Beta-Binomial Model](betaBinomial.md)**
    - **[Poisson-Gamma Model](https://github.com/gdlc/STT465/blob/master/poisson.md)**
-   - **[Normal Model](https://github.com/gdlc/STT465/blob/master/nomrmalModel.md)**
+   - **Normal Model
+      - [Inferering the mean, assuming known variance][(https://github.com/gdlc/STT465/blob/master/NormalModel_Mean.md)**
+      - [Infering both the mean and the variance via Gibbs Sampling](https://github.com/gdlc/STT465/blob/master/NormalModel_MeanAndVarianceGibbs.md)
 
 
 ## Homework
@@ -35,3 +37,5 @@
   - **[HW 2](https://github.com/gdlc/STT465/blob/master/HW2.md)** (Due Sunday Sept. 30th).
   - **[HW 3](https://github.com/gdlc/STT465/blob/master/HW3.md)** (Due Wed. Oct. 9th).
   - **Sample Answers**: [HW1](https://github.com/gdlc/STT465/blob/master/HW1_sample.pdf), [HW2](https://github.com/gdlc/STT465/blob/master/HW2_sample.pdf) and  [HW3](https://github.com/gdlc/STT465/blob/master/HW3_sample.pdf)
+  
+  
