@@ -26,8 +26,8 @@
    - **[Introduction to R](https://github.com/QuantGen/RIntro)** [Covered by Marco Lopez-Cruz].
    - **[Beta-Binomial Model](betaBinomial.md)**
    - **[Poisson-Gamma Model](https://github.com/gdlc/STT465/blob/master/poisson.md)**
-   - **Normal Model
-      - [Inferering the mean, assuming known variance](https://github.com/gdlc/STT465/blob/master/NormalModel_Mean.md)**
+   - **Normal Model**
+      - [Inferering the mean, assuming known variance](https://github.com/gdlc/STT465/blob/master/NormalModel_Mean.md)
       - [Infering both the mean and the variance via Gibbs Sampling](https://github.com/gdlc/STT465/blob/master/NormalModel_MeanAndVarianceGibbs.md)
 
 
