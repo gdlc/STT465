@@ -1,6 +1,8 @@
 
 ## Normal Model
 
+In this entry we discuss iference on the mean in a Gaussian (aka Normal) models assuming that the variance is known. Inference for uknown variance is discussed in a different entry.
+
   1) The normal distribution (mean, variance, quantiles) and its properites
   2) Normal Likelihood
   3) Maximum Likelihood estimation and inference 
