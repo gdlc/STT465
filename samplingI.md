@@ -30,7 +30,7 @@ We will consider thre methods. The first one is a very simple one: we sample dir
 
 **(0) Sample directly from the joint distribution**
 
-Let's 1, 2, 3 and 4 represent each of the possible events, (X=0,Y=0), (X=1,Y=0), (X=0,Y=1) and
+Let's 1, 2, 3 and 4 represent each of the possible events: (X=0,Y=0), (X=1,Y=0), (X=0,Y=1) and
 (X=1,Y=1). We can sample numbers 1 to 4 with the probabilities in PROBS. Here is an example
 
 
@@ -43,7 +43,7 @@ Let's 1, 2, 3 and 4 represent each of the possible events, (X=0,Y=0), (X=1,Y=0),
   xtabs(~X+Y)/B   
 ```
 
-In the above-case we sample directly from the joint distribution. In many instances involving continous or a mix of continuous  and discrete random variables the joint distribution does not have a closed form (we will encounter this many times when dealing with posterior distributions). In these cases we need another sampling strategy. Below we discuss two methods: composition sampling and Gibbs sampling.
+In the above-case we sample directly from the joint distribution. In many instances (involving continous or a mix of continuous  and discrete random variables) the joint distribution does not have a closed form (we will encounter this many times when dealing with posterior distributions) and therefore, we cannot sample dirctly from it. In these cases we need another sampling strategy. Below we discuss two methods: composition sampling and Gibbs sampling.
 
 
 **(1) Composition Sampling**
@@ -65,11 +65,26 @@ or
 
 The following R-code illustrates a sampler that samples X from its marginal and Y from p(Y|XA)
 
-
 ```r
-  # Conditional Distributions  		
-  X=rbinom(prob=pX[2],size=1,n=B)
-  pYGX=ifelse(X==0,PROBS[1,2]/pX[1],PROBS[2,2]/pX[2])
-  Y=rbinom(prob=pYGX,n=B,size=1)
+  # Sampling X from its marginal
+  X=rbinom(prob=pX[2],size=1,n=B) 
+  pY1GX0=PROBS[1,2]/pX[1]
+  pY1GX1=PROBS[2,2]/pX[2]
+  Y=rbinom(n=B,size=1,prob=ifelse(X==0,pY1GX0,pY1GX1))
+  table(X,Y)/B
 ```
-		
+
+**(2) Gibbs Sampling**
+
+In a Gibbs sampler we sample X and Y from their fully-conditional distributions. The sequence takes this fomr
+
+Initialize X (say set x1=0), 
+
+Sample `Y1~P(Y|X=x1)`
+
+Sample `X2~P(X|Y=y1)`,
+
+Sample `Y2~P(Y|X=x2)`,...
+
+
+
