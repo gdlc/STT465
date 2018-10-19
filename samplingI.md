@@ -10,7 +10,7 @@ The joint probability (object PROBS below) is given by the following table
 
 ```r
  PROBS=rbind(c(.3,.1),
-			c(.15,.45))
+	   c(.15,.45))
 			
 rownames(PROBS)=c("p(X=0)","P(X=1)")
 colnames(PROBS)=c("p(Y=0)","P(Y=1)")
@@ -26,7 +26,7 @@ colnames(PROBS)=c("p(Y=0)","P(Y=1)")
 
 ## How do we sample from p(X,Y)?
 
-We will consider thre methods. The first one is a very simple one. T
+We will consider thre methods. The first one is a very simple one: we sample directly from the joint distribution!
 
 **(0) Sample directly from the joint distribution**
 
@@ -42,7 +42,12 @@ Let's 1, 2, 3 and 4 represent each of the possible events, (X=0,Y=0), (X=1,Y=0),
   Y=ifelse(z==1|z==3,0,1)
   xtabs(~X+Y)/B   
 ```
+
+In the above-case we sample directly from the joint distribution. In many instances involving continous or a mix of continuous  and discrete random variables the joint distribution does not have a closed form (we will encounter this many times when dealing with posterior distributions). In these cases we need another sampling strategy. Below we discuss two methods: composition sampling and Gibbs sampling.
+
+
 **(1) Composition Sampling**
+
 
 Composition sampling uses the fact that p(X,Y)=p(X)p(Y|X), which suggests that we can
 sample from the joint distribution by sampling one of the random variables from its marginal
