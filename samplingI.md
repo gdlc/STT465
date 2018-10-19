@@ -86,5 +86,31 @@ Sample `X2~P(X|Y=y1)`,
 
 Sample `Y2~P(Y|X=x2)`,...
 
+It turns out that sampling recursively from fully conditionals render samples that can be regarded as samples drawn from the joint distribution! If interested on the history and insight inot the Gibbs sampler I suggest you read [Casella and George (1992)](https://www.jstor.org/stable/2685208?seq=1#page_scan_tab_contents). The follwing code illustrates the Gibbs sampler for a simple 2-Bernulli RV system.
+
+```r
+  pX1GY0=PROBS[2,1]/pY[1]
+  pX1GY1=PROBS[2,2]/pY[2]
+  
+  pY1GX0=PROBS[1,2]/pX[1]
+  pY1GX1=PROBS[2,2]/pX[2] 
+
+  X=rep(NA,B)
+  Y=rep(NA,B)
+  y=1;x=0 # initialize however you want, it should not matter!
+  for(i in 1:B){
+  	x=rbinom(n=1,size=1,prob=ifelse(y==0,pX1GY0,pX1GY1))
+	X[i]=x
+	
+	y=rbinom(n=1,size=1,prob=ifelse(x==0,pY1GX0,pY1GX1))
+	
+	Y[i]=y
+  }
+  table(X,Y)/B 
+  plot(X[1:100],type='o') #Breifly discuss mixing....
+ 
+```
+
+
 
 
