@@ -1,4 +1,3 @@
-sex race age su gout
 M W 67 8.300000191 N
 F W 72 8.600000381 N
 F W 70 7.300000191 N
