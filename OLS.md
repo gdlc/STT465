@@ -5,11 +5,12 @@ The following example illustrates how to implement a multiple linear regression 
 
 **Data**
 ```r
- DATA=read.table('~/GitHub/STT465/gout.txt',header=T)
-  
- 
+ DATA=read.table("~/Desktop/gout.txt",sep=" ",header=T)
+
  head(DATA) #shows first rows, use tail(DATA) to see the last rows and fix(DATA) to see data as a table
- 
+ dim(DATA)
+ str(data)
+
  # Transforming categorical predictors into factors
   DATA$sex=factor(DATA$sex,levels=c('M','F'))
   DATA$race=as.factor(DATA$race) 
