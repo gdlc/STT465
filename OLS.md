@@ -46,9 +46,13 @@ The following example illustrates how to implement a multiple linear regression 
   eHat=y-X%*%bHat
   vEHat=sum(eHat^2)/(nrow(DATA)-ncol(X)) # Sum of squares of errors divide by n-rank(X)
   SE=sqrt(diag(solve(XtX)*vEHat))
-  z=bHat/SE
+  t_stat=bHat/SE
   ## P-values (under normality first, and under t then...)
-  pvaluesN=pnorm(abs(z),lower.tail=F)*2
-  pvaluesT=pt(abs(z),df=length(y)-ncol(X),lower.tail=F)*2
+  pvaluesN=pnorm(abs(t_stat),lower.tail=F)*2
+  pvaluesT=pt(abs(t_stat),df=length(y)-ncol(X),lower.tail=F)*2
   
+  
+  summary(fm)
+  
+  cbind(bHat,SE,t_stat,pValuesT)
 ```
