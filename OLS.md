@@ -19,7 +19,7 @@ The following example illustrates how to implement a multiple linear regression 
  **OLS usign `lm()`**
  ```r
  # OLS esitmation
-  fm=lm(serum_urate~sex+race+age,data=DATA)
+  fm=lm(su~sex+race+age,data=DATA)
   
   # extracts estimates, SEs and p-values
   summary(fm)
@@ -34,8 +34,8 @@ The following example illustrates how to implement a multiple linear regression 
  # Incidence matrix for intercept and effects of sex, race and age
  X=cbind(1,dF,dW,DATA$age) 
  head(X)
- y=DATA$serum_urate
-
+ y=DATA$su
+ 
  # OLS equations
  Xy=t(X)%*%y
  XtX=t(X)%*%X
