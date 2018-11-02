@@ -9,7 +9,7 @@ The following example illustrates how to implement a multiple linear regression 
 
  head(DATA) #shows first rows, use tail(DATA) to see the last rows and fix(DATA) to see data as a table
  dim(DATA)
- str(data)
+ str(DATA)
 
  # Transforming categorical predictors into factors
   DATA$sex=factor(DATA$sex,levels=c('M','F'))
