@@ -1,13 +1,14 @@
-### Bonus Homework (counts up to 10 points of either midterm or final).
+### HW 4 (Multiple Linear Regression via OLS).
 
-Due Monday Nov 13 in class (printed, no e-mails)
+Due Sunday Nov. 11 (11:50pm) in D2L. 
+
+Please sumbit either a pdf, html, word or image file (1 file per sumbission) with your answeres.
 
 (1) Using the [gout](https://github.com/gdlc/STT465/blob/master/gout.txt) data set estimate the effects of sex, race and age on serum urate using the
 `lm()` function.
      1.1. Report your results
      1.2. Summarize your findings.
      1.3. Report the code you used to obtain the results in 1.1. or 1.2.
-     
      
  (2) Produce a table equal to summary(fm) using matrix operations. Your table must include estiamte, SE, t-statistic and p-value.
      2.1. Report your results and comment on any difference with 1.1.
