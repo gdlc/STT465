@@ -1,4 +1,4 @@
-### HW 5: Bayesian Analysis of the Logistic Regression
+### HW 6: Bayesian Analysis of the Logistic Regression
 
 **Topics**:
   - Logistic Regression
