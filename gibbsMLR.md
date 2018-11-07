@@ -1,7 +1,9 @@
 TThe following entry provides a Gibbs sampler for a Muliple Linear Regression Model (MLR). The derivation of the fully conditionals needed
 to implement the Gibbs sampler is available in the following [handout (MLR.pdf)](https://github.com/gdlc/STT465/blob/master/MLR.pdf).
 
-The function that implements the Gibbs sampler takes as inputs:
+
+
+The function that implements the Gibbs sampler takes as **inputs**:
 
   - y (nx1) a vector with the response.
   - X (nxp) the incidence matrix for effects,
@@ -10,7 +12,15 @@ The function that implements the Gibbs sampler takes as inputs:
   error variance) and b0 and varB (the mean and variance of the normal prior assigned to effects). All these have default values that will give
   a relatively un-informative prior.
   
- The function returns the samples collected by the Gibbs sampler.
+ The function returns the samples collected by the Gibbs sampler, the **Gibbs sampler algorithm** is schematically summarized here:
+  - Initialize parameters (e.g., initialize all reg. coefficients to zero, and the intercept to mean(y), initialize the error variance to be equal to the variance of y).
+  - Loop over iterations (1:nIter)
+     - Sample the error variance from its fully conditional distribution (see [9] in [MLR.pdf](https://github.com/gdlc/STT465/blob/master/MLR.pdf).
+     - Loop ovrer predictors (1:ncol(X)), at each iteration sample each coefficient from its fully conditional distribution (see expression [8] in [MLR.pdf](https://github.com/gdlc/STT465/blob/master/MLR.pdf).
+ 
+
+
+ 
   
  **Example of use**
  
