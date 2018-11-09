@@ -33,4 +33,4 @@ we discuss basic steps we should follow to make inferences from samples collecte
   HPDinterval(SAMPLES,prob=c(.025,.975)) 
  ```
  
- 
+ [Home](https://github.com/gdlc/STT465)
