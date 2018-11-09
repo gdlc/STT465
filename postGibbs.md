@@ -1,9 +1,36 @@
-### Analyses of MCMC Samples
+## Post-Gibbs Analysis
 
 
-In Bayesian Data Analyses we often use Monte Carlo (MC) methods to draw samples from the posterior distribution. These samples are used
-to estimate features of the posterior distribution such as posterior means, posterior standard deviations, credibility regions, etc. The quality
-of these MC estimates (i.e., how close our MC estimated posterior mean is from the true posterior mean) depends, among many factors, on how many
-independent MC samples we have. 
+In most Bayesian models the posterior distribution does not have a closed form. In those cases, we typically use Monte Carlo Methods
+to draw samples from the posterior distribution and use those samples to make inferences about model's uknowns. In this entry
+we discuss basic steps we should follow to make inferences from samples collected using Monte Carlo methods.
 
-[Under construction!]
+  -**Convergence**. We first need to assess whetehr our algorithm has converged to the posterior distribution. The very first thinge we need to do are:
+    - *Trace plots*: We plot, for each parameters the chain containing the samples collected. We used trace plots to visually asses convergence mixing and to visually determined a save burn-in period 
+(later on we will discuss more formal approaches, but the trace plot is essential).
+
+  -**Discard burn-in**
+  
+  -**Mixing**: a more quantitative measure of mixing can be done using an aut-correlation plot, and by estimating the effective sample size.
+  
+  -**Thinning** retain 1 out of k samples.
+  
+  -**Do we have enough samples?** (based on the samples after discarding burn-in and after thinning): Typically we will require at least 100 effective samples. Additionally we can copute the
+  Monte Carlo Error (MC-SE). We often want to have MC SE that are smaller than x/100  where x is the estimate posterior mean for the
+  parameter in question.
+  -**Compute posterior means, posterior standard deviations and hig-postrior credibility regions**.
+  
+  
+ ```r
+  library(coda)
+  SAMPLES=as.mcmc(SAMPLES) # converting your samples into an MCMC object
+  plot(SAMPLES[,2])
+  plot(as.vector(SAMPLES[,2]),type='o',cex=.5,col=4)
+  
+  burnIn=1:100
+  SAMPLES=SAMPLES[-burnIn,]
+  summary(SAMPLES)
+  HPDinterval(SAMPLES,prob=c(.025,.975)) 
+ ```
+ 
+ 
