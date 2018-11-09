@@ -34,5 +34,5 @@ we discuss basic steps we should follow to make inferences from samples collecte
  ```
  
  
- **[Wages Data Set]**(https://github.com/gdlc/STAT_COMP/blob/master/wage.txt)
+ **[Wages Data Set](https://github.com/gdlc/STAT_COMP/blob/master/wage.txt)**
  [Home](https://github.com/gdlc/STT465)
