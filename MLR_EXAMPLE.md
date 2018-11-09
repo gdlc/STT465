@@ -11,4 +11,4 @@
  6) Collect, for the same model above-specified, 10,000 samples (Hint: for you to run `gibbsMLR(y,X,...)` you will need a numeric vector with the response (y, wages) and the incidence matrix for effects (sex, race, education, experience, ...). `lm()` creates the incidence matrix internally. `gibbsMLR()` does not, so you will need to create it. For this you can use
  `X=model.matrix(~ a+b+...,data=DATA)` where a, b are the predictors that are included in DATA. This will create your incidence matrix and then you will use it in `gibbsMLR(y,X)`.
  7) Conduct post-gibbs analysis (trace plot, auto-correlation, decide on burn-in and thinning, provide posterior means, posterior SDs and posterior
- credibility regions, estimate and report MC error).
+ credibility regions, estimate and report MC error). (see example of [post gibbs analyses](https://github.com/gdlc/STT465/blob/master/postGibbs.md))
