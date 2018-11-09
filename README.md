@@ -29,7 +29,7 @@
    - **Normal Model**
       - [Inferering the mean, assuming known variance](https://github.com/gdlc/STT465/blob/master/NormalModel_Mean.md)
       - [Infering both the mean and the variance via Gibbs Sampling](https://github.com/gdlc/STT465/blob/master/NormalModel_MeanAndVarianceGibbs.md)
-   - **Multiple Linear Regression*
+   - **Multiple Linear Regression**
      - [Handout](https://github.com/gdlc/STT465/blob/master/MLR.pdf) (includes OLS, Max. Likelihood & Bayesian).
      - [Gibbs Sampler](https://github.com/gdlc/STT465/blob/master/gibbsMLR.md)
 
