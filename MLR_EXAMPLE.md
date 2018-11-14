@@ -87,16 +87,19 @@
 ```
 ### Bayesian Analysis of Linear Hypothesis
 
+A linear hypothesis takes the form **t'b**=0. **t** is called a contrats. 
+
+For instance you may want to test wehther the ethnic disparity can be fully described as a difference between whites versus either hispanic or black. This can be formalized as `b[4]=b[5]` or `b[4]-b[5]=0`. The contrast for this is:
+`contrast=c(0,0,0,0,1,-1,0,0)`. Thus, H0: `**contrast**'**b**=0`. The contrast is a deterministic function of the parameters (**b**). 
+
 
 ```r
-
-
+ contrast=c(0,0,0,0,1,-1,0,0)
+ tmp=B%*%contrast
+ plot(density(tmp));abline(v=0)
+ abline(v=HPDinterval(as.mcmc(tmp),p=.95),col=2,lty=2)
+ mean(tmp>0)
+ mean(tmp<0)
 ```
+We conclude that the posterior probability that Black people have a wage smaller than Hispanics, holding evereything else constant, is ~0.97.
 
-
-###  Predictive Distribution
-
-```r
-
-
-```
