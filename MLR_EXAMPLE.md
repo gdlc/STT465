@@ -49,12 +49,42 @@
 ### Bayesian Analysis
 
 ```r
-  y=DATA$Wage
+  wage=DATA$Wage
   X=model.matrix(~Education+South+Black+Hispanic+Sex+Married+Experience,data=DATA)
-  SAMPLES=gibbsMLR(y=wage,X=X,nIter=11000)  
+  SAMPLES=gibbsMLR(y=wage,X=X,nIter=13000)  
+  dim(SAMPLES$effects)# cols are effects, rows are samples
+  head(SAMPLES$varE)
+   
+```
+### Post Gibbs
+
+```r
+ # trace plots of a few parameters....
+  plot(SAMPLES$varE[1:500],type='o') # 1st 100 interations should be discared as burn in
+  plot(SAMPLES$effects[1:500,1],type='o') #Intercept, probably 1st 200 needs to be discarded
+  plot(SAMPLES$effects[1:5000,2],type='o') # effect of education. Discard 2000?
+  
+  ## Discarding 3K iterations as burn-in
+  B=SAMPLES$effects[-(1:3000),];colnames(B)=colnames(X)
+  varE=SAMPLES$varE[-(1:3000)]
+  
+  summary(B)
+  
+  # Converting to MCMC object 
+  library(coda)
+  B=as.mcmc(B)
+  varE=as.mcmc(varE)
+  
+  
+  autocorr.plot(B[,1],lag.max=100)
+  autocorr.plot(B[,2],lag.max=100)
+  
+  summary(B)
+  summary(varE)
+
+  HPDinterval(B,prob=.95)
 
 ```
-
 ### Bayesian Analysis of Linear Hypothesis
 
 
