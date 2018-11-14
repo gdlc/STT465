@@ -41,6 +41,8 @@
   - **[HW 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)** (Due Sunday Sept. 16th).
   - **[HW 2](https://github.com/gdlc/STT465/blob/master/HW2.md)** (Due Sunday Sept. 30th).
   - **[HW 3](https://github.com/gdlc/STT465/blob/master/HW3.md)** (Due Wed. Oct. 9th).
+  - **[HW 4](https://github.com/gdlc/STT465/blob/master/HW_4_OLS.md)**.
+  
   - **Sample Answers**: [HW1](https://github.com/gdlc/STT465/blob/master/HW1_sample.pdf), [HW2](https://github.com/gdlc/STT465/blob/master/HW2_sample.pdf) and  [HW3](https://github.com/gdlc/STT465/blob/master/HW3_sample.pdf)
   
   
