@@ -69,9 +69,6 @@ gibbsMLR=function(y,X,nIter=10000,df0=4,S0=var(y)*0.8*(df0-2),b0=0,varB=1e12,ver
   b=B[1,]
   varE[1]=var(y)
   resid=y-B[1,1]
- 
- ## Centering
-  for(i in 2:ncol(X)){  X[,i]=X[,i]-mean(X[,i]) }
 
  ## Computing sum x'x for each column
   SSx=colSums(X^2)
@@ -97,7 +94,7 @@ gibbsMLR=function(y,X,nIter=10000,df0=4,S0=var(y)*0.8*(df0-2),b0=0,varB=1e12,ver
 
     if(i%%verbose==0){ cat(' Iter ', i, '\n') }
   }
- 
+
   out=list(effects=B,varE=varE)
   return(out)
  }
