@@ -1,6 +1,6 @@
 ## HW 4 SST 465
 
-**Due**: Wednesday Nov 22.
+**Due**: Wednesday Nov 21.
 
 
 We have used the Gibbs sampler to implement a Bayesian multiple linear regression model. In this HW you will work on analyzing samples collected with a Gibbs sampler.
