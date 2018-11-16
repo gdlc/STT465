@@ -5,7 +5,7 @@
 
 We have used the Gibbs sampler to implement a Bayesian multiple linear regression model. In this HW you will work on analyzing samples collected with a Gibbs sampler.
 
-A classical paper [Casella & George, 1992](http://www.stat.ufl.edu/archived/casella/OlderPapers/ExpGibbs.pdf)
+A classical paper [Casella & George, 1992](https://www.tandfonline.com/doi/abs/10.1080/00031305.1992.10475878)
 
 
 
