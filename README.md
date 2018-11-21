@@ -37,7 +37,7 @@
      
    - **Logistic Regression**
      - [Handout]()
-     - [R-examples]((https://github.com/gdlc/STT465/blob/master/postGibbs.md))
+     - [R-examples](https://github.com/gdlc/STT465/blob/master/logisticRegression.md)
 
 
 ## Homework
