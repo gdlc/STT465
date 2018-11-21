@@ -34,6 +34,10 @@
      - [Gibbs Sampler](https://github.com/gdlc/STT465/blob/master/gibbsMLR.md)
      - [Post-Gibbs](https://github.com/gdlc/STT465/blob/master/postGibbs.md)
      - [EXAMPLE](https://github.com/gdlc/STT465/blob/master/MLR_EXAMPLE.md)
+     
+   - **Logistic Regression**
+     - [Handout]()
+     - [R-examples]((https://github.com/gdlc/STT465/blob/master/postGibbs.md))
 
 
 ## Homework
