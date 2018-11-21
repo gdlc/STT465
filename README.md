@@ -36,17 +36,19 @@
      - [EXAMPLE](https://github.com/gdlc/STT465/blob/master/MLR_EXAMPLE.md)
      
    - **Logistic Regression**
-     - [Handout]()
+     - [Handout](https://github.com/gdlc/STT465/blob/master/LogisticRegression-I.pdf)
      - [R-examples](https://github.com/gdlc/STT465/blob/master/logisticRegression.md)
 
 
 ## Homework
  
-  - **[HW 1](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)** (Due Sunday Sept. 16th).
-  - **[HW 2](https://github.com/gdlc/STT465/blob/master/HW2.md)** (Due Sunday Sept. 30th).
-  - **[HW 3](https://github.com/gdlc/STT465/blob/master/HW3.md)** (Due Wed. Oct. 9th).
-  - **[HW 4](https://github.com/gdlc/STT465/blob/master/HW_4_OLS.md)**.
-  
-  - **Sample Answers**: [HW1](https://github.com/gdlc/STT465/blob/master/HW1_sample.pdf), [HW2](https://github.com/gdlc/STT465/blob/master/HW2_sample.pdf) and  [HW3](https://github.com/gdlc/STT465/blob/master/HW3_sample.pdf)
+  - **[HW 1 (probability)](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)** (Due Sunday Sept. 16th).
+  - **[HW 2 (Binomial & Poisson model)](https://github.com/gdlc/STT465/blob/master/HW2.md)** (Due Sunday Sept. 30th).
+  - **[HW 3 (Poisson & Normal models)](https://github.com/gdlc/STT465/blob/master/HW3.md)** (Due Wed. Oct. 9th).
+  - **[HW 4 (Linear regression OLS)](https://github.com/gdlc/STT465/blob/master/HW_4_OLS.md)**.
+  - **[HW 5 (Linear regression Bayesian)](https://github.com/gdlc/STT465/blob/master/HW5_POSTGIBBS.md)**. 
+  - **[HW6 (Logistic regression, likelihood & Bayesian)(https://github.com/gdlc/STT465/blob/master/HW6_LOGISTIC_REGRESSION.md)**. (Due Monday Dec. 3rd)
+ 
+ - **Sample Answers**: [HW1](https://github.com/gdlc/STT465/blob/master/HW1_sample.pdf), [HW2](https://github.com/gdlc/STT465/blob/master/HW2_sample.pdf) and  [HW3](https://github.com/gdlc/STT465/blob/master/HW3_sample.pdf)
   
   
