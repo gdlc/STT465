@@ -130,7 +130,7 @@ logisticRegressionBayes=function(y,X,nIter=70000,V=.02,varB=rep(10000,ncol(X)),b
      if(delta==1){ b[j]=candidate[j] }
     }
     B[i,]=b
-    if(i%%100==0){
+    if(i%%1000==0){
       message(" Iteration ",i)
     }
  
