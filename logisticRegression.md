@@ -106,39 +106,36 @@ logisticRegressionBayes=function(y,X,nIter=70000,V=.02,varB=rep(10000,ncol(X)),b
    B=matrix(nrow=nIter,ncol=p)
    colnames(B)=colnames(X)
  
-   # Centering predictors
-   meanX=colMeans(X)
-   for(i in 2:p){ X[,i]=(X[,i]-meanX[i]) }
-
- 
   # A vector to trace acceptancve
-   accept=rep(NA,nIter)
-   accept[1]=TRUE 
+   accept=matrix(nrow=nIter,ncol=p,NA)
+   accept[1,]=TRUE 
    
   # Initialize
    B[1,]=0
    B[1,1]=log(mean(y)/(1-mean(y)))
    b=B[1,]
   for(i in 2:nIter){
-   
-    candidate=rnorm(mean=b,sd=sqrt(V),n=p)
+    
+    for(j in 1:p){
+      candidate=b
+      candidate[j]=rnorm(mean=b[j],sd=sqrt(V),n=1)
  
-    logP_current=logP(y,X,b0=b0,varB=varB,b=b)
-    logP_candidate=logP(y,X,b0=b0,varB=varB,b=candidate)
+      logP_current=logP(y,X,b0=b0,varB=varB,b=b)
+      logP_candidate=logP(y,X,b0=b0,varB=varB,b=candidate)
+      r=min(1,exp(logP_candidate-logP_current))
+      delta=rbinom(n=1,size=1,p=r)
    
-    r=min(1,exp(logP_candidate-logP_current))
-    delta=rbinom(n=1,size=1,p=r)
+      accept[i,j]=delta
    
-    accept[i]=delta
-   
-    if(delta==1){ b=candidate }
+     if(delta==1){ b[j]=candidate[j] }
+    }
     B[i,]=b
-    print(paste0(i," accept?=",delta==1))
+    if(i%%100==0){
+      message(" Iteration ",i)
+    }
  
   }
   
-  B[,1]=B[,1]-B[,-1]%*%meanX[-1] # absorbing means on the intercept
- 
   return(list(B=B,accept=accept))
 }
  
