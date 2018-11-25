@@ -38,7 +38,7 @@ Use the Metropolis sampler developed in class ([logisticRegressionBayes](https:/
 2.3. Use the samples collected to estimate the posterior distribution of the survival probability for male and female in each of the classes (fix age to 30). For each of the groups report a histogram of the posterior desnity of the survival probability with vertical read lines indicating 95% posterior credibility regions.
 
 
-3. Collect samples for the model of question 2 using `V=.1`, `V=.05`, and `V=.001`.
+3. The  function `logisticRegressionBayes` implements a Metropolis algorithm. With candidates generated from normal distribution with mean equal to the current sample and variance `V`. Small values of lambda lead to high rates of acceptance but high correlation between samples. Fit the logistic regression of question 2 using `V=.5`, `V=.1`,`V=.001`,`V=.0001`, and `V=.00005`.
 
 3.1. Report the average acceptance rate and the lag-50 correlation and effective number of samples for the effect of age.
 
