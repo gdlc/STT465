@@ -38,6 +38,7 @@
    - **Logistic Regression**
      - [Handout](https://github.com/gdlc/STT465/blob/master/LogisticRegression-I.pdf)
      - [R-examples](https://github.com/gdlc/STT465/blob/master/logisticRegression.md)
+     - [Metropolis algorithm](https://github.com/gdlc/STT465/blob/master/metropolis.md)
 
 
 ## Homework
