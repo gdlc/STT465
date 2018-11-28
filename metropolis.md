@@ -35,5 +35,5 @@ with a Metropolis algorithm.
  
 ```
 
-We will use a Metropolis algorithm to draw samples from the posterior distribution of a logistic regression model. The sampler(https://github.com/gdlc/STT465/blob/master/logisticRegression.md) presented [here](https://github.com/gdlc/STT465/blob/master/logisticRegression.md) implements that.
+We will use a Metropolis algorithm to draw samples from the posterior distribution of a logistic regression model. The sampler presented [here](https://github.com/gdlc/STT465/blob/master/logisticRegression.md) implements that.
 
