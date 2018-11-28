@@ -11,13 +11,13 @@ with a Metropolis algorithm.
 
 ```r
  n=100000    # number of samples we want to draw
- D=.1        # controls the support of the uniform distribution used to generate candidates
+ D=5        # controls the support of the uniform distribution used to generate candidates
  x=rnorm(n)  # samples from the target distribution (used for comparison only).
  
  z= rep(NA,n) 
  z[1]=-1
  for(i in 2:n){
- 	candidate=runif(min=-D,max=D,n=1)+z[i-1] # symmetric candidate generator
+ 	candidate=runif(min=-D,max=D,n=1)# symmetric candidate generator (note, uniform is not strictly correct because it does not have the same support as that of th normal, but N(0,1) won't generate samples outside of [-5,5], so this is almost correct
  	r=dnorm(candidate)/dnorm(z[i-1])
  	accept<-runif(1)<r
  	if(accept){
