@@ -11,7 +11,7 @@ with a Metropolis algorithm.
 
 ```r
  n=100000    # number of samples we want to draw
- D=.5        # controls the support of the uniform distribution used to generate candidates
+ D=3        # controls the support of the uniform distribution used to generate candidates
  x=rnorm(n)  # samples from the target distribution (used for comparison only).
  
  z= rep(NA,n) 
