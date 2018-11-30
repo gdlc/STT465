@@ -32,19 +32,17 @@ by linking the success probability, P(Yi=1|xi,b), with a linear predictor using 
 ```r
 rm(list=ls())
  
-DATA=read.table('~/Desktop/gout.txt',header=F)
+DATA=read.table('~/Desktop/gout.txt',header=T)
 colnames(DATA)=c('sex','race','age','serumUrate','gout')
 DATA$gout=ifelse(DATA$gout=="Y",1,0)
- 
 ### Logistic Regression
  
- 
-# Incidence matrix for effects
+# Incidence matrix for effects (not needed for glm because glm accepts formula as an input)
 Z=as.matrix(model.matrix(~sex+age+race+serumUrate,data=DATA))[,-1]
 Z=scale(Z,center=T,scale=F) # centering to improve mixing and convergence
  
 # Maximum Likelihood using glm
-fm=glm(gout~Z,data=DATA,family='binomial')
+fm=glm(DATA$gout~Z,family='binomial')
 summary(fm)
 
 ```
@@ -147,7 +145,7 @@ logisticRegressionBayes=function(y,X,nIter=70000,V=.02,varB=rep(10000,ncol(X)),b
 
 ```r
   fm=glm(gout~sex+race+age,data=DATA,family='binomial')
-  samples=logisticRegressionBayes(y=DATA$gout,X=model.matrix(~sex+race+age,data=DATA),nIter=50000)
+  samples=logisticRegressionBayes(y=DATA$gout,X=cbind(1,Z),nIter=50000)
   cbind(fm$coef,colMeans(samples$B[-(1:1000),]))
   
   
