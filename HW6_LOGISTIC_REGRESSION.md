@@ -1,6 +1,6 @@
 ### HW 6: Bayesian Analysis of the Logistic Regression
 
-**Due**: Monday Dec. 3rd (@ D2L and printed copy in class)
+**Due**: Monday Dec. 3rd (printed copy in class)
 
 **Topics**:
   - Logistic Regression
