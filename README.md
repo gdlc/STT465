@@ -40,7 +40,8 @@
      - [R-examples](https://github.com/gdlc/STT465/blob/master/logisticRegression.md)
      - [Metropolis algorithm](https://github.com/gdlc/STT465/blob/master/metropolis.md)
 
-
+   - **[Finite Mixture Models](https://github.com/gdlc/STT465/blob/master/MIXTURE_MODEL.md)**
+    
 ## Homework
  
   - **[HW 1 (probability)](https://github.com/gdlc/STT465/blob/master/HW1_STT465.pdf)** (Due Sunday Sept. 16th).
