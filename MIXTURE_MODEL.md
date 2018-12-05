@@ -2,7 +2,7 @@
 ## Finite Mixutre Model
 
 
-** Simulating data from a 3-component mixture of normals**
+**Simulating data from a 3-component mixture of normals**
 
 ```r
 n=1000
