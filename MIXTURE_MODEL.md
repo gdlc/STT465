@@ -94,14 +94,28 @@ gibbsMixture=function(y,nComp,nIter=5000,DF0=4,S0=1,priorMean=0,priorVar=1e5){
 		SD[i,j]=sqrt(V)
 	}
 	print(i)
-
-	return(list(MEAM=MU,SD=SD,GROUP=GROUP))
+    }
+	return(list(MEAN=MU,SD=SD,GROUP=GROUP))
 }
 ```
 
 **Example**
 
 ```r
+ SAMPLES=gibbsMixture(y=y,nComp=3,nIter=1000)
+  str(SAMPLES)
 
+ # Trace plots
+ 
+ par(mfrow=c(3,1))
+ for(i in 1:3){
+	 plot(SAMPLES$MEAN[,i],cex=.5,col=4,type='o')
+ }
+ 
+ par(mfrow=c(3,1))
+ for(i in 1:3){
+	 plot(SAMPLES$SD[,i],cex=.5,col=4,type='o')
+ }
+ 
 
 ```
