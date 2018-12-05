@@ -1,6 +1,22 @@
 
 ## Finite Mixutre Model
 
+In a finite mixture model the density function of a RV (say X) is modeled as a weighted sum of a finite number of distributions. Here we we consider mixutres of Gaussians, thus, for a 3-component mixutre model the denisty of X would be given by:
+
+
+  `p(x|mu,SD)=p1*dnorm(x,mean=mu[1],sd=SD[1])+p2*dnorm(x,mean=mu[2],sd=SD[2]) + (1-p1-p2)*dnorm(x,mean=mu[1],sd=SD[1])`  [1]
+     
+where: p1 and p2 are proportions (0<p1<1, 0<p2<1, 0<p1+p2<1) and `dnorm()` is the density of a normally distributed random variable.
+
+We can also describe a finite mixture using a Hierarchical model:
+
+Let `zi` be a indicator variable that can take values 1, 2 and 3, then we can write:
+
+
+	`p(Zi=zi,Yi=yi|mu,SD)=p(yi|Zi=zi,mu,SD)*p(Zi=zi)`			[2]
+	
+Here, `p(zi)=1(zi=1)*p1 + 1(zi=2)*p2 + 1(zi=3)*(1-p1-p2)` is the prior probability of the components which is given by the mixture proportions (p1, p2 and 1-p1-p2), `mu` and `SD` are vector containing the means and SDs of each of the components of the mixtures and `p(yi|Zi=zi,mu,SD)=dnorm(yi|mu[zi],SD[zi])` is a normal density. The expected value of [2], taken with respecdt to the distribution of Z, is [1]. 
+
 
 **Simulating data from a 3-component mixture of normals**
 
@@ -11,12 +27,24 @@ sd0=c(.2,.3,.3)
 prob0=c(.3,.4,.3)
 group0=sample(1:length(mu0),size=n,replace=T,prob=prob0)
 y=rnorm(n=n,mean=mu0[group0],sd=sd0[group0])
-hist(y,30)
+
+# Empirical density
+fitDen=density(y)
+plot(fitDen,lwd=2,col=4,ylim=c(0,.6))
+x=seq(from=0,to=4,length=1000)
+for(i in 1:3){
+   tmp=dnorm(x=x,mean=mu0[i],sd=sd0[i])
+   tmp=tmp/max(tmp)*max(fitDen$y)
+   lines(x=x,y=tmp,col=8,lwd=.5)
+}
+
+
 ```
 
 **Gibbs Sample**
 
 ```r
+
 gibbsMixture=function(y,nComp,nIter=5000,DF0=4,S0=1,priorMean=0,priorVar=1e5){
 
   n=length(y)
@@ -25,7 +53,6 @@ gibbsMixture=function(y,nComp,nIter=5000,DF0=4,S0=1,priorMean=0,priorVar=1e5){
   GROUP=matrix(nrow=nIter,ncol=n,NA)
 
   ## Initial values
-
   GROUP[1,]=1
   if(nComp==2){
 	GROUP[1,y>=median(y)]=2
@@ -70,4 +97,11 @@ gibbsMixture=function(y,nComp,nIter=5000,DF0=4,S0=1,priorMean=0,priorVar=1e5){
 
 	return(list(MEAM=MU,SD=SD,GROUP=GROUP))
 }
+```
+
+**Example**
+
+```r
+
+
 ```
